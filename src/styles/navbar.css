@@ -1,0 +1,278 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+
+  z-index: 1000;
+
+  padding: 18px 0;
+
+  background: var(--nav-background);
+
+  border-bottom: 1px solid var(--border-color);
+
+  backdrop-filter: blur(12px);
+}
+
+.navbar-container {
+  width: min(1200px, 92%);
+
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+}
+
+
+/* Logo */
+
+.navbar-logo {
+  color: var(--text-color);
+
+  text-decoration: none;
+
+  font-size: 28px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  flex-shrink: 0;
+}
+
+
+/* Navigation Links */
+
+.nav-links {
+  display: flex;
+  align-items: center;
+
+  gap: 28px;
+}
+
+.nav-links a {
+  color: var(--text-color);
+
+  text-decoration: none;
+
+  font-size: 15px;
+
+  transition: opacity 0.2s ease;
+}
+
+.nav-links a:hover {
+  opacity: 0.6;
+}
+
+
+/* Right Side Buttons */
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  flex-shrink: 0;
+}
+
+
+/* Theme Button */
+
+.theme-button {
+  width: 40px;
+  height: 40px;
+
+  border: none;
+
+  background: transparent;
+
+  color: var(--text-color);
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  transition: background 0.2s ease;
+}
+
+.theme-button:hover {
+  background: var(--button-hover);
+}
+
+
+/* Apply Button */
+
+.apply-button {
+  display: inline-block;
+
+  text-decoration: none;
+
+  color: #ffffff;
+
+  background: var(--accent-color);
+
+  padding: 11px 18px;
+
+  border-radius: 6px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  transition: transform 0.2s ease;
+}
+
+.apply-button:hover {
+  transform: translateY(-2px);
+}
+
+
+/* Mobile Menu Button */
+
+.menu-button {
+  width: 40px;
+  height: 40px;
+
+  border: none;
+
+  background: transparent;
+
+  color: var(--text-color);
+
+  cursor: pointer;
+
+  display: none;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+}
+
+.menu-button:hover {
+  background: var(--button-hover);
+}
+
+
+/* =========================
+   TABLET / MOBILE
+   ========================= */
+
+@media (max-width: 900px) {
+
+  .navbar {
+    padding: 16px 0;
+  }
+
+  .navbar-container {
+    width: 92%;
+  }
+
+  /*
+    Hide normal navigation.
+    It will appear when the menu
+    button is clicked.
+  */
+
+  .nav-links {
+    position: absolute;
+
+    top: 76px;
+    left: 0;
+
+    width: 100%;
+
+    padding: 30px 5%;
+
+    background: var(--nav-background);
+
+    border-bottom: 1px solid var(--border-color);
+
+    display: none;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 22px;
+  }
+
+  /*
+    React adds "open" when
+    menuOpen is true.
+  */
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links a {
+    font-size: 17px;
+  }
+
+  /*
+    Show hamburger button
+  */
+
+  .menu-button {
+    display: flex;
+  }
+
+  /*
+    Hide Apply Now on small screens
+    to keep the navbar clean.
+  */
+
+  .apply-button {
+    display: none;
+  }
+}
+
+
+/* =========================
+   SMALL MOBILE
+   ========================= */
+
+@media (max-width: 500px) {
+
+  .navbar {
+    padding: 14px 0;
+  }
+
+  .navbar-container {
+    width: 90%;
+  }
+
+  .navbar-logo {
+    font-size: 24px;
+  }
+
+  .navbar-actions {
+    gap: 6px;
+  }
+
+  .theme-button,
+  .menu-button {
+    width: 38px;
+    height: 38px;
+  }
+
+  .nav-links {
+    top: 68px;
+
+    padding: 25px 5%;
+  }
+
+  .nav-links a {
+    font-size: 16px;
+  }
+}

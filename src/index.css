@@ -1,0 +1,44 @@
+:root {
+  --background-color: #f7f5ef;
+  --text-color: #17251d;
+  --nav-background: rgba(247, 245, 239, 0.92);
+  --border-color: rgba(23, 37, 29, 0.12);
+  --accent-color: #b48b45;
+  --button-hover: rgba(23, 37, 29, 0.08);
+}
+
+.app.dark {
+  --background-color: #111613;
+  --text-color: #f3f1e9;
+  --nav-background: rgba(17, 22, 19, 0.92);
+  --border-color: rgba(243, 241, 233, 0.12);
+  --accent-color: #c9a15c;
+  --button-hover: rgba(243, 241, 233, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--background-color);
+  color: var(--text-color);
+}
+
+button,
+a {
+  font: inherit;
+}
+
+.app {
+  min-height: 100vh;
+  background: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
