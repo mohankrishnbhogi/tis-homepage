@@ -8,11 +8,12 @@ I wanted to give the homepage a cleaner and more modern look while keeping the i
 
 ## Live Demo
 
-Coming soon.
+https://tis-homepage-tau.vercel.app.
 
 ## GitHub Repository
 
-Coming soon.
+https://github.com/mohankrishnbhogi/tis-homepage.
+
 
 ## Technologies Used
 
