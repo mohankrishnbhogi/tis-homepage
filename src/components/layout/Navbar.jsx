@@ -71,6 +71,7 @@ function Navbar({ theme, onThemeChange }) {
           <a
             href="#admissions"
             className="apply-button"
+            onClick={() => window.scrollTo({ top: document.getElementById("admissions").offsetTop - 80, behavior: "smooth" })}
           >
             Apply Now
           </a>
